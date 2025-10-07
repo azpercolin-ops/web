@@ -7,10 +7,18 @@
     <title>Un ramo para ti</title>
     <style>
         body {
-            height: 100%;
-            width: 120%;
+            margin: 0;
             background: #080f1a;
             overflow: hidden;
+            overflow-y: scroll;
+        }
+        
+        .scrollable {
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #080f1a;
+            padding: 10px;
+            background: #080f1a;
         }
         
         .container {
@@ -18,6 +26,18 @@
             left: 50%;
             top: 30%;
             transform: translate(-50%, -50%);
+        }
+        
+        .tamaño {
+            max-width: 10000px;
+            /* Tamaño máximo en pantallas grandes */
+            width: 90%;
+            /* Ocupa el 90% del ancho en pantallas pequeñas */
+            margin: auto;
+            /* Centrado horizontal */
+            background: #080f1a;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         
         .glass {
@@ -346,88 +366,64 @@
             }
         }
         
-        @keyframes latido {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.03);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-        
         .texto {
-            font-family: 'Georgia', serif;
             font-size: 2em;
             color: #d6336c;
             background: linear-gradient(to right, #ffe6f0, #fff0f5);
-            padding: 20px;
+            padding: 15px;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
             text-align: center;
             line-height: 1.6;
             border: 2px dashed #ff99c8;
             animation: latido 2s infinite;
-        }
-        
-        .contenedor {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .abajo {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 98%;
-            text-align: center;
-            padding: 15px;
+            margin-top: 35%;
+            position: absolute;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="glass">
-            <div class="shine"></div>
-        </div>
-        <div class="thorns">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="leaves">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="petals">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="deadPetals">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    <audio controls autoplay loop>
-        <source src="pedroinfante.mp3" type="audio/mpeg">
-    </audio>
-    <div>
-        <div class="abajo">
-            <h4 class="texto">Como en la Luna de octubre de Pedro Infante, hoy te entrego esta flor morada, para que sepas que mi amor florece incluso en la noche más serena.. 💕</h>
+    <div class="tamaño">
+        <div class="scrollable">
+            <div class="container">
+                <div class="glass">
+                    <div class="shine"></div>
+                </div>
+                <div class="thorns">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="leaves">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="petals">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="deadPetals">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <audio controls autoplay loop>
+  <source src="pedroinfante.mp3" type="audio/mpeg">
+</audio>
+            <div>
+                <h4 class="texto">Como en la Luna de octubre de Pedro Infante, hoy te entrego esta flor morada, para que sepas que mi amor florece incluso en la noche más serena.. 💕</h>
+            </div>
         </div>
     </div>
 </body>

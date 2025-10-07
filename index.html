@@ -8,7 +8,7 @@
     <style>
         body {
             height: 100%;
-            width: 100%;
+            width: 120%;
             background: #080f1a;
             overflow: hidden;
         }
@@ -19,11 +19,7 @@
             top: 30%;
             transform: translate(-50%, -50%);
         }
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-gap: 10px;
-        }
+        
         .glass {
             height: 800px;
             width: 600px;
@@ -350,19 +346,45 @@
             }
         }
         
+        @keyframes latido {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.03);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
         .texto {
+            font-family: 'Georgia', serif;
             font-size: 2em;
             color: #d6336c;
             background: linear-gradient(to right, #ffe6f0, #fff0f5);
-            padding: 15px;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
             text-align: center;
             line-height: 1.6;
             border: 2px dashed #ff99c8;
             animation: latido 2s infinite;
-            margin-top: 35%;
-            position: absolute;
+        }
+        
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .abajo {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 98%;
+            text-align: center;
+            padding: 15px;
         }
     </style>
 </head>
@@ -401,10 +423,12 @@
         </div>
     </div>
     <audio controls autoplay loop>
-  <source src="pedroinfante.mp3" type="audio/mpeg">
-</audio>
+        <source src="pedroinfante.mp3" type="audio/mpeg">
+    </audio>
     <div>
-        <h4 class="texto">Como en la Luna de octubre de Pedro Infante, hoy te entrego esta flor morada, para que sepas que mi amor florece incluso en la noche más serena.. 💕</h>
+        <div class="abajo">
+            <h4 class="texto">Como en la Luna de octubre de Pedro Infante, hoy te entrego esta flor morada, para que sepas que mi amor florece incluso en la noche más serena.. 💕</h>
+        </div>
     </div>
 </body>
 

@@ -24,20 +24,8 @@
         .container {
             position: absolute;
             left: 50%;
-            top: 45%;
+            top: 55%;
             transform: translate(-50%, -50%);
-        }
-        
-        .tamaño {
-            max-width: 1000px;
-            /* Tamaño máximo en pantallas grandes */
-            width: 90%;
-            /* Ocupa el 90% del ancho en pantallas pequeñas */
-            margin: auto;
-            /* Centrado horizontal */
-            background: #080f1a;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         
         .glass {
@@ -366,69 +354,91 @@
             }
         }
         
-        .texto {
-            font-size: 2em;
-            color: #d6336c;
-            background: linear-gradient(to right, #ffe6f0, #fff0f5);
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(255, 182, 193, 0.5);
+        .banner {
+            background: linear-gradient(to right, #5c00ad, #5c00ad);
+            color: white;
+            padding: 20px;
             text-align: center;
-            line-height: 1.6;
-            border: 2px dashed #ff99c8;
-            animation: latido 2s infinite;
-            position: absolute;
+            font-size: 1.6em;
+            font-weight: bold;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            flex: 0 0 80px;
+            /* Altura fija */
+        }
+        
+        .banner2 {
+            background: linear-gradient(to bottom, #080f1a, #080f1a);
+            color: white;
+            padding: 300px 30px;
+            text-align: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            /* Ocupa todo el espacio disponible */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .aud {
+            align-items: center;
+            text-align: center;
+            justify-content: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="tamaño">
-        <div class="scrollable">
-            <div class="container">
-                <div class="glass">
-                    <div class="shine"></div>
+    <div class="banner2">
+        <div class="tamaño">
+            <div class="scrollable">
+                <div class="container">
+                    <div class="glass">
+                        <div class="shine"></div>
+                    </div>
+                    <div class="thorns">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="leaves">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="petals">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="deadPetals">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
-                <div class="thorns">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="leaves">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="petals">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="deadPetals">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-            <audio controls autoplay loop>
-  <source src="pedroinfante.mp3" type="audio/mpeg">
-</audio>
-            <div>
-                <h4 class="texto">Como en la Luna de octubre de Pedro Infante, hoy te entrego esta flor morada, para que sepas que mi amor florece incluso en la noche más serena.. 💕</h>
             </div>
         </div>
+    </div>
+    <div class="aud">
+        <audio controls autoplay loop>
+         <source src="pedroinfante.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="banner">
+        <h4>Como en la Luna de octubre de Pedro Infante, hoy te entrego esta flor morada, para que sepas que mi amor florece incluso en la noche más serena.. 💕</h>
     </div>
 </body>
 
 
 </html>
-
-
-

@@ -388,6 +388,29 @@
             text-align: center;
             justify-content: center;
         }
+        /* 📱 Celulares */
+        
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                padding: 10px;
+            }
+        }
+        /* 📲 Tablets */
+        
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .container {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        /* 💻 Computadoras */
+        
+        @media (min-width: 1025px) {
+            .container {
+                justify-content: space-between;
+            }
+        }
     </style>
 </head>
 
